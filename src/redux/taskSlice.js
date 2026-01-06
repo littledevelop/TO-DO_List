@@ -40,10 +40,12 @@ const takeSlice = createSlice({
       saveToLocalStorage(state.list);
     },
     editTask: (state, action) => {
-      const { id, text } = action.payload;
+      const { id, text, priority} = action.payload;
       const task = state.list.find((task) => task.id === id);
+      // const priority = state.list.find((task) => task.id === id);
       if (task) {
         task.text = text;
+        task.priority = priority
         saveToLocalStorage(state.list);
       }
     },
