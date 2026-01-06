@@ -5,7 +5,7 @@ import TaskList from "./components/TaskList";
 function App() {
   return (
     <div className="container">
-      <h1>To-Do List (React + Redux)</h1>
+      <h1>To-Do List</h1>
       <TaskInput/>
       <TaskList/>
     </div>
